@@ -98,7 +98,7 @@ leurs prix et les quantités sélectionnées avant de passer à l'étape suivant
                         <td data-label="subtotal" class="pannier">{{ $cartItem->price * $cartItem->qty }} DHS</td>
                         <td data-label="delete" class="actions pannier" data-th="">
                             <form action="{{ route('pannier.destroy', $cartItem->rowId) }}" method="post">
-                      
+
                                     <button type="submit" class="btn btn-outline-dark">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                                             <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0v-5a.5.5 0 0 1 .5-.5zm3 0a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0v-5a.5.5 0 0 1 .5-.5z"/>
@@ -113,7 +113,7 @@ leurs prix et les quantités sélectionnées avant de passer à l'étape suivant
 
         <div class="total">
             <span class="t">Total: {{ $total }} DHS</span>
-            <form action="{{ route('checkout') }}" method="GET">
+            <form action="{{ secure_url('checkout') }}" method="GET">
                 <button type="submit" class="btn btn-success">Passer à la caisse</button>
             </form>
         </div>
